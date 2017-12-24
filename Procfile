@@ -1,1 +1,1 @@
-web: gunicorn runp-heroku:app
+web: export FLASK_APP=hello.py; flask run
