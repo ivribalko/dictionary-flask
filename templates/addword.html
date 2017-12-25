@@ -1,0 +1,17 @@
+<!doctype html>
+<form method=post>
+  <input type=text onclick=clear_value(this) name=word placeholder=Слово>
+  <input type=text onclick=clear_value(this) name=synonym placeholder=Синоним>
+  <input type=submit value=Добавить>
+  <a href="/list">LIST</a>
+</form>
+{% with messages = get_flashed_messages() %}
+  {% for message in messages %}
+    <li>{{ message }}</li>
+  {% endfor %}
+{% endwith %}
+<script type=text/javascript>
+  function clear_value(elem) {
+    elem.value = null;
+  }
+</script>
