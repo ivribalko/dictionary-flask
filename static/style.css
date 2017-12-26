@@ -63,6 +63,10 @@ input {
   border-radius: var(--borderradius);
 }
 
+input:focus {
+   outline: none;
+}
+
 button {
   max-width: 30em;
   height: 3em;
