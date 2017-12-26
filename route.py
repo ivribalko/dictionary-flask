@@ -6,7 +6,7 @@ from models import Vocabulary
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'GET':
-        return render_template('add.html', html_body_style="height: 100%")
+        return render_template('add.html')
         
     word = request.form['word']
     synonym = request.form['synonym']

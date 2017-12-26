@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block script %}
-  set_navigated('list');
+  on_load(function() {
+    set_navigated("list");
+  });
 {% endblock %}
 {% block body %}
   {% for word in words %}

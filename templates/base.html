@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" style="{{ html_body_style }}">
+<html lang="ru">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
@@ -9,15 +9,22 @@
       }
 
       function set_navigated(id) {
-        on_load(function() {
-            document.getElementById(id).className = "active";
-        });
+        element_by_id(id).className = "active";
+      }
+
+      function expand_height() {
+        document.documentElement.style.height = "100%";
+        document.body.style.height = "100%";
+      }
+
+      function element_by_id(id) {
+        return document.getElementById(id);
       }
       {% block script %}
       {% endblock %}
     </script>
   </head>
-  <body class="glass" style="{{ html_body_style }}">
+  <body class="glass">
     <div style="height: 40px"></div> {#  fixed scroll  #}
     <ul class="nav">
       <li><a id="add" href="/">Добавить</a></li>

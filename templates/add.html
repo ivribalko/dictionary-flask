@@ -11,16 +11,19 @@
     }
   }
 
-  set_navigated("add");
-  on_load(show_flashed);
+  on_load(function() {
+    expand_height();
+    show_flashed();
+    set_navigated("add");
+  });
 {% endblock %}
 {% block body %}
   <form method="post" autocomplete="off" class="adapt">
     <div>
-      <input type="text" onclick="clear_value(this)" name="word" placeholder="Гришинский">
+      <input type="text" name="word" placeholder="Гришинский">
     </div>
     <div>
-      <input type="text" onclick="clear_value(this)" name="synonym" placeholder="Русский">
+      <input type="text" name="synonym" placeholder="Русский">
     </div>
     <div>
       <button type="submit">Добавить</button>
