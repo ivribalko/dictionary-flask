@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <script type="text/javascript">
+      function set_navigated(id) {
+        on_load(function() {
+            document.getElementById(id).className = "active";
+        });
+      }
+      
+      function on_load(func) {
+        window.addEventListener('load', func);
+      }
+      {% block script %}
+      {% endblock %}
+    </script>
+  </head>
+  <body>
+    <ul class="nav">
+      <li><a id="add" href="/">Добавить</a></li>
+      <li><a id="list" href="/list">Список</a></li>
+      <li><a id="quote" href="">Цитата</a></li>
+    </ul>
+    {% block body %}
+    {% endblock %}
+  </body>
+</html>

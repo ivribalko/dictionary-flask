@@ -1,0 +1,141 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #EBEBEB;
+}
+
+.adapt {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.adapt div {
+  margin: 1em;
+  text-align: center;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: var(--fontsize);
+  font: var(--fonttype);
+}
+
+.nav li a:hover {
+  background-color: #111;
+}
+
+.nav li a.active {
+  background-color: #4CAF50;
+}
+
+input {
+  max-width: 30em;
+  font-size: var(--fontsize);
+  font: var(--fonttype);
+  height: 4em;
+  text-align: center;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  border-radius: var(--borderradius);
+}
+
+button {
+  max-width: 30em;
+  height: 3em;
+  width: 15em;
+  font-size: var(--fontsize);
+  font: var(--fonttype);
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: var(--borderradius);
+  box-shadow: 0 9px #999;
+}
+
+button:hover {
+  background-color: #3e8e41
+}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.message {
+  opacity: 0;
+  width: 150px;
+  height: 50px;
+  margin-top: -25px;
+  margin-left: -75px;
+  display: block;
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: var(--borderradius);
+  font-size: var(--fontsize);
+}
+
+.fade-in {
+  animation-name: fadeInOut;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 2s;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0
+  }
+
+  50% {
+    opacity: 0.8
+  }
+
+}
+
+.list {
+  font-size: var(--fontsize);
+  font: var(--fonttype);
+  margin: 0.5em;
+  padding: 0.3em;
+  background-color: #f1f1f1;
+  border-radius: var(--borderradius);
+}
+
+:root {
+  --fontsize: 1em;
+  --fonttype: 12pt/10pt sans-serif;
+  --borderradius: 15px;
+}

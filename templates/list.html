@@ -1,4 +1,9 @@
-<a href="/">BACK</a>
-{% for word in words %}
-  <li>{{ word.word + ":" + word.synonym }}</li>
-{% endfor %}
+{% extends "base.html" %}
+{% block script %}
+  set_navigated('list');
+{% endblock %}
+{% block body %}
+  {% for word in words %}
+    <p class="list">{{ word.word + ": " + word.synonym }}</p>
+  {% endfor %}
+{% endblock %}
