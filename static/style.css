@@ -63,10 +63,6 @@ input {
   border-radius: var(--borderradius);
 }
 
-input:focus {
-   outline: none;
-}
-
 button {
   max-width: 30em;
   height: 3em;
@@ -91,6 +87,15 @@ button:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+*:focus {
+  outline: none !important;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
 }
 
 .message {
