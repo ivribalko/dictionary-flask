@@ -1,8 +1,6 @@
 html, body {
   margin: 0;
-  height: 100%;
   width: 100%;
-  background-color: #EBEBEB;
 }
 
 .nav {
@@ -61,6 +59,7 @@ input {
   border: 0;
   padding: 0;
   border-radius: var(--borderradius);
+  box-shadow: 0 1px 1px 0 #999, inset 0px 3px 3px 0px #ddd;
 }
 
 button {
@@ -76,7 +75,7 @@ button {
   background-color: #4CAF50;
   border: none;
   border-radius: var(--borderradius);
-  box-shadow: 0 9px #999;
+  box-shadow: 0 4px #999;
 }
 
 button:hover {
@@ -85,8 +84,8 @@ button:hover {
 
 button:active {
   background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  box-shadow: 0 4px #666;
+  transform: translateY(2px);
 }
 
 *:focus {
@@ -137,6 +136,16 @@ button:active {
 
 }
 
+.glass {
+  background: #abbaab;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.glass.height {
+  height: 100%;
+}
+
 .list {
   font-size: var(--fontsize);
   font: var(--fonttype);
@@ -144,6 +153,7 @@ button:active {
   padding: 0.7em;
   background-color: white;
   border-radius: var(--borderradius);
+  box-shadow: 0 2px 2px 0 #999;
 }
 
 :root {

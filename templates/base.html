@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" style="{{ html_body_style }}">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
@@ -17,7 +17,7 @@
       {% endblock %}
     </script>
   </head>
-  <body>
+  <body class="glass" style="{{ html_body_style }}">
     <div style="height: 40px"></div> {#  fixed scroll  #}
     <ul class="nav">
       <li><a id="add" href="/">Добавить</a></li>
